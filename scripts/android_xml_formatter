@@ -1,0 +1,12 @@
+#!/bin/bash
+jar="$HOME/libs/JavaTools/android_xml_formatter.jar"
+java_bin="/sbin/java"
+
+command="$java_bin -jar $jar"
+
+while [ $# -gt 0 ]; do
+    command="$command $1"
+    shift
+done
+
+$command
